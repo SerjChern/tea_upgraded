@@ -1,0 +1,71 @@
+::ng-deep .slick-prev:before {
+  content: url("/assets/images/arrows/left_arrow.png");
+}
+
+::ng-deep .slick-prev {
+  left: 15px;
+  z-index: 10;
+}
+
+::ng-deep .slick-next:before {
+  content: url("/assets/images/arrows/right_arrow.png");
+}
+
+::ng-deep .slick-next {
+  right: 36px;
+  z-index: 10;
+}
+
+::ng-deep .ui-state-default .ui-icon{
+  background-image: url("/assets/images/arrows/down.png");
+  width: 20px;
+  height: 20px;
+}
+::ng-deep .ui-state-active .ui-icon{
+  background-image: url("/assets/images/arrows/up.png");
+  width: 20px;
+  height: 20px;
+}
+
+::ng-deep .ui-icon-triangle-1-e {
+  background-position: 0 0;
+}
+
+::ng-deep .ui-icon-triangle-1-s {
+  background-position: 0 0;
+}
+
+::ng-deep .ui-accordion-header-icon{
+  position: relative;
+  left: 95%;
+}
+
+.pop-up {
+  position: fixed;
+  top: 55%;
+  right: calc(50% - 140px);
+  width: 320px;
+  border-radius: 5px;
+  border: 1px solid #0962d1;
+  background-color: rgba(120, 190, 241, 0.9);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pop-up-text {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.pop-up-button {
+  text-align: center;
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+

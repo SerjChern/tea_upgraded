@@ -1,0 +1,21 @@
+<div class="container overflow-hidden">
+  <div class="col-xl-12 col-lg-12">
+    <div class="card flex-row align-items-center">
+      <a class="image-popup-no-margins" href="#">
+        <img src="{{product.image}}" class="card-img-top image-popup-no-margins" alt="...">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">{{ product.title }}</h5>
+        <p class="card-text">{{product.description }}</p>
+        <div class="d-flex flex-row justify-content-between align-items-baseline">
+          <a class="btn btn-primary px-5" routerLink="/order" [queryParams] = "{product: product.title}">Купить</a>
+          <h5>{{ product.price | currency:'RUB':'руб.':'1.0-2':'ru-RU' }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="loading" class="loader-bg">
+    <div class="loader">
+    </div>
+  </div>
+</div>

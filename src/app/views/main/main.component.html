@@ -1,0 +1,64 @@
+<div class="container overflow-hidden">
+  <section class="carouselle wow animate__fadeInLeft">
+    <div class="row container">
+      <div class="col-lg-12 my-5 pb-4">
+        <div class="single-item">
+          <div><img class="img-fluid" src="../../../assets/images/banners/Banner1.png" alt=""></div>
+          <div><img class="img-fluid" src="../../../assets/images/banners/Banner2.png" alt=""></div>
+          <div><img class="img-fluid" src="../../../assets/images/banners/Banner3.png" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="faq">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center my-5">
+        <h2>Ответы на часто задаваемые вопросы</h2>
+      </div>
+      <div class="col-lg-8 container">
+        <div id="accordion">
+          <h3 class="border-0 bg-primary rounded-3 text-white mb-3 p-4">Собираете ли вы подарочные боксы?</h3>
+          <div class="border-0">
+            <p>
+              Да, у нас есть такая услуга. Мы можем собрать подарочный бокс на любой вкус, объем и
+              стоимость!
+            </p>
+          </div>
+          <h3 class="border-0 bg-primary rounded-3 text-white mb-3 p-4">Сколько у вас разновидностей чая?</h3>
+          <div class="border-0">
+            <p>
+              Да, у нас есть такая услуга.
+            </p>
+          </div>
+          <h3 class="border-0 bg-primary rounded-3 text-white mb-3 p-4">В какой срок осуществляется доставка?</h3>
+          <div class="border-0">
+            <p>
+              Да, у нас есть такая услуга.
+            </p>
+          </div>
+          <h3 class="border-0 bg-primary rounded-3 text-white mb-3 p-4">У вас обновляется ассортимент?</h3>
+          <div class="border-0">
+            <p>
+              Да, у нас есть такая услуга.
+            </p>
+          </div>
+          <h3 class="border-0 bg-primary rounded-3 text-white mb-3 p-4">Какого объема у вас пачки чая?</h3>
+          <div class="border-0">
+            <p>
+              Да, у нас есть такая услуга.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pop-up " *ngIf="popup">
+      <div class="pop-up-text">
+        <h4>Посмотрите наши чайные коллекции</h4>
+      </div>
+      <div class="pop-up-button btn btn-primary">
+        <a [routerLink]="'catalog'">Смотреть</a>
+      </div>
+    </div>
+  </section>
+</div>
+
