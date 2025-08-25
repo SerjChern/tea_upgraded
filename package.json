@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build_git": "ng build --output-path docs --base-href /tea_upgraded/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
