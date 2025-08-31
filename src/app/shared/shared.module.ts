@@ -6,8 +6,6 @@ import {CustomTextPipe} from "./pipes/custom-text.pipe";
 import {RouterModule} from "@angular/router";
 import {InputValidatorDirective} from "./directives/input-validator.directive";
 
-
-
 @NgModule({
   declarations: [
     HeaderComponent,

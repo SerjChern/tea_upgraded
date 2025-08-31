@@ -9,17 +9,17 @@ import {OrderType} from "../../types/order-type";
 })
 export class ProductService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private readonly http: HttpClient) { }
 
-  getProducts(): Observable<ProductType[]> {
+  public getProducts(): Observable<ProductType[]> {
     return this.http.get<ProductType[]>('https://testologia.ru/tea');
   }
 
-  getProduct(id: number): Observable<ProductType> {
+  public getProduct(id: number): Observable<ProductType> {
     return this.http.get<ProductType>(`https://testologia.ru/tea?id=${id}`);
   }
 
-  placeOrder(data: OrderType) {
+  public placeOrder(data: OrderType) {
     return this.http.post<{success: boolean}>(`https://testologia.ru/order-tea`, data);
   }
 }

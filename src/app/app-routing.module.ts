@@ -7,8 +7,9 @@ import {OrderComponent} from "./views/order/order.component";
 
 const routes: Routes = [
   {path: '', component: MainComponent},
-  {path: 'catalog', component: CatalogComponent},
-  {path: 'product/:id', component: ProductComponent},
+  {path: '',
+    loadChildren: () =>
+      import('./views/products/catalog.module').then(m => m.CatalogModule)},
   {path: 'order', component: OrderComponent},
   {path: '**', redirectTo: ''}
 ];

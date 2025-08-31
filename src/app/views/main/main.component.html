@@ -2,11 +2,7 @@
   <section class="carouselle wow animate__fadeInLeft">
     <div class="row container">
       <div class="col-lg-12 my-5 pb-4">
-        <div class="single-item">
-          <div><img class="img-fluid" src="../../../assets/images/banners/Banner1.png" alt=""></div>
-          <div><img class="img-fluid" src="../../../assets/images/banners/Banner2.png" alt=""></div>
-          <div><img class="img-fluid" src="../../../assets/images/banners/Banner3.png" alt=""></div>
-        </div>
+          <div><img src="../../../assets/images/banners/Banner1.png" alt="banner"></div>
       </div>
     </div>
   </section>
@@ -52,11 +48,16 @@
       </div>
     </div>
     <div class="pop-up " *ngIf="popup">
+      <div class="cross" (click)="closeTab()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 44 44" fill="none">
+          <path d="M11.1429 11.0001L34 35M10 34.9999L32.8571 11" stroke="black" stroke-width="3"/>
+        </svg>
+      </div>
       <div class="pop-up-text">
         <h4>Посмотрите наши чайные коллекции</h4>
       </div>
       <div class="pop-up-button btn btn-primary">
-        <a [routerLink]="'catalog'">Смотреть</a>
+        <a [routerLink]="'/catalog'">Смотреть</a>
       </div>
     </div>
   </section>

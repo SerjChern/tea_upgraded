@@ -10,13 +10,15 @@ import {Subscription, tap} from "rxjs";
   styleUrls: ['./catalog.component.scss']
 })
 export class CatalogComponent implements OnInit, OnDestroy {
+  protected products: ProductType[] = [];
+  protected loading: boolean = false;
 
   private subscription: Subscription | null = null;
-  constructor(private ProductService: ProductService,
-              private router: Router) { }
 
-  public products: ProductType[] = [];
-  public loading: boolean = false;
+  constructor(private readonly ProductService: ProductService,
+              private readonly router: Router) { }
+
+
   ngOnInit(): void {
     this.loading = true;
     this.subscription = this.ProductService.getProducts()

@@ -1,20 +1,20 @@
-import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import { Observable, Subscription} from "rxjs";
 import 'jquery';
 import 'jquery-ui/ui/widgets/accordion';
+
 declare const $: any;
-import WOW from 'wowjs';
-import {observable, Observable, Subscription} from "rxjs";
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent implements OnInit, OnDestroy, AfterViewInit {
+export class MainComponent implements OnInit, OnDestroy {
 
   private observable : Observable<number>;
   private subscription: Subscription | null = null;
-  public popup: boolean = false;
+  protected popup: boolean = false;
 
   constructor() {
     this.observable = new Observable(observer => {
@@ -24,26 +24,23 @@ export class MainComponent implements OnInit, OnDestroy, AfterViewInit {
     })
   }
 
+  protected closeTab(): void {
+    this.popup = false;
+  }
+
+
   ngOnInit(): void {
     this.subscription = this.observable.subscribe({
       next:() =>  this.popup = true
     })
+
+    $('#accordion').accordion({
+      collapsible: true,
+      heightStyle: 'content'
+    });
   }
 
   ngOnDestroy(): void {
     this.subscription?.unsubscribe();
   }
-
-  ngAfterViewInit(): void {
-      $('.single-item').slick({
-        arrows: true,
-        slidesToShow: 1
-      });
-
-      $('#accordion').accordion({
-        collapsible: true,
-        heightStyle: 'content'
-      });
-  }
-
 }

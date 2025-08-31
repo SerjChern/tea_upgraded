@@ -1,21 +1,3 @@
-::ng-deep .slick-prev:before {
-  content: url("/assets/images/arrows/left_arrow.png");
-}
-
-::ng-deep .slick-prev {
-  left: 15px;
-  z-index: 10;
-}
-
-::ng-deep .slick-next:before {
-  content: url("/assets/images/arrows/right_arrow.png");
-}
-
-::ng-deep .slick-next {
-  right: 36px;
-  z-index: 10;
-}
-
 ::ng-deep .ui-state-default .ui-icon{
   background-image: url("/assets/images/arrows/down.png");
   width: 20px;
@@ -51,8 +33,13 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+  .cross {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+    cursor: pointer;
+  }
 }
 
 .pop-up-text {
