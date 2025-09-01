@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class CustomTextPipe implements PipeTransform {
 
   transform(value: string): string {
-    if (value.length >= 90) {
+    if (value.length >= 75) {
       return value.slice(0, 75) + '...';
     } else {
       return value;

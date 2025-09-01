@@ -21,7 +21,7 @@ export class InputValidatorDirective implements Validators {
   @Input('nameValidator') pattern: string = '';
   constructor() {}
 
-  validate(control: AbstractControl): ValidationErrors | null {
+  public validate(control: AbstractControl): ValidationErrors | null {
     return inputValidator(this.pattern)(control);
   }
 

@@ -23,8 +23,8 @@ export class OrderComponent implements OnInit, OnDestroy {
     comment: ''
   }
 
-  public success: boolean = false;
-  public error: boolean = false;
+  protected success: boolean = false;
+  protected error: boolean = false;
 
   private subscription: Subscription | null = null;
   private subscriptionOrder: Subscription | null = null;
