@@ -1,4 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+::ng-deep .ui-state-default .ui-icon{
+  background-image: url("./assets/images/arrows/down.png");
+  width: 20px;
+  height: 20px;
+}
+::ng-deep .ui-state-active .ui-icon{
+  background-image: url("./assets/images/arrows/up.png");
+  width: 20px;
+  height: 20px;
+}
 .loader-bg {
   width: 100%;
   height: 100%;
