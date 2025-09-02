@@ -7,24 +7,25 @@ import { registerLocaleData } from '@angular/common';
 import localeRu from '@angular/common/locales/ru';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {SharedModule} from "./shared/shared.module";
-import {MainModule} from "./views/main/main.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {OrderModule} from "./views/order/order.module";
+import {MainComponent} from "./views/main/main.component";
+import {OrderComponent} from "./views/order/order.component";
 
 registerLocaleData(localeRu);
 
 @NgModule({
   declarations: [
     AppComponent,
+    MainComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     SharedModule,
-    OrderModule,
-    MainModule,
     FormsModule,
+    ReactiveFormsModule,
     NgbModule
   ],
   providers: [],
